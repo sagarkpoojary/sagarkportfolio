@@ -66,7 +66,7 @@ export const ProjectsGrid: React.FC = () => {
               className="text-6xl md:text-8xl font-extrabold uppercase tracking-tighter mb-8"
             >
               Strategic <br/> <span className="text-gray-200 dark:text-gray-800">Implementations</span>
-            </h2>
+            </motion.h2>
             <p className="text-gray-400 text-lg font-light leading-relaxed max-w-lg">
               High-performance systems engineered to solve enterprise bottlenecks through intelligent automation and rigorous design logic.
             </p>
