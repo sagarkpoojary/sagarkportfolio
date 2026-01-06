@@ -6,6 +6,8 @@ import { SkillsCloud } from './components/SkillsCloud';
 import { AboutSection } from './components/AboutSection';
 import { Footer } from './components/Footer';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 
 const App: React.FC = () => {
   const [isDark, setIsDark] = useState(true);
@@ -42,6 +44,8 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen relative overflow-x-hidden selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black bg-white dark:bg-dark-bg transition-colors duration-500">
+      <SpeedInsights />
+      <Analytics />
       
       {/* Dynamic Blurry Background Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
