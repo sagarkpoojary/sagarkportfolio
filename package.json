@@ -1,28 +1,29 @@
 {
   "name": "sagar-k-poojary-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
-    "lucide-react": "^0.556.0",
-    "@react-three/fiber": "^9.4.2",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.1.0",
     "framer-motion": "^12.23.25",
-    "@react-three/drei": "^10.7.7",
+    "lucide-react": "^0.454.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "three": "^0.181.2",
-    "@vercel/speed-insights": "^1.3.1",
-    "@vercel/analytics": "^1.6.1"
+    "@react-three/fiber": "^9.4.2",
+    "@react-three/drei": "^10.7.7"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.170.0",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.0"
   }
 }
