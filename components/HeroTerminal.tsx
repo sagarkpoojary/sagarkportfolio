@@ -53,11 +53,20 @@ export const HeroTerminal: React.FC = () => {
               initial={{ opacity: 0, filter: 'blur(20px)', x: -20 }}
               animate={{ opacity: 1, filter: 'blur(0px)', x: 0 }}
               transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
-              className="text-6xl md:text-8xl font-extrabold tracking-tighter mb-6 leading-none uppercase"
+              className="text-6xl md:text-8xl font-extrabold tracking-tighter mb-4 leading-none uppercase"
             >
               {PERSONAL_INFO.name.split(' ')[0]} <br/> 
               <span className="text-gray-300 dark:text-gray-700">{PERSONAL_INFO.name.split(' ').slice(1).join(' ')}</span>
             </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-sm uppercase tracking-[0.3em] text-gray-400 dark:text-gray-600 mb-8"
+            >
+              {PERSONAL_INFO.role}
+            </motion.p>
             
             <motion.div 
               initial={{ opacity: 0, filter: 'blur(10px)' }}
