@@ -8,6 +8,7 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const PROJECTS: Project[] = [
+  // Updated portfolio projects - April 2026
   {
     id: 'fraud-detection',
     title: 'Credit Card Fraud Detection',
