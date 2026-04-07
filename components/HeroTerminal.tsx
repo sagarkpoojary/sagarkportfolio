@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Command, Cpu, Layers } from 'lucide-react';
+import { Command, Cpu, Layers, Briefcase } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const TYPING_STRINGS = [
+  "AI & Business Automation Executive",
   "Solutions Architect",
-  "AI & Automation Expert",
-  "Full-Stack Engineer",
+  "Odoo ERP Specialist",
+  "B2B Workflow Engineer",
   "MLOps Strategist"
 ];
 
@@ -124,12 +125,27 @@ export const HeroTerminal: React.FC = () => {
                  <Command size={140} strokeWidth={1} />
                </div>
                
-               <div className="space-y-8 font-mono relative z-10">
+               <div className="space-y-6 font-mono relative z-10">
+                  {/* Current Role Highlight */}
+                  <div className="p-4 border border-gray-100 dark:border-green-900/40 bg-gray-50/80 dark:bg-green-950/20">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                      <p className="text-[9px] uppercase tracking-[0.25em] text-green-600 dark:text-green-400 font-black">Current Role</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Briefcase size={16} className="mt-0.5 text-gray-400 flex-shrink-0" />
+                      <div>
+                        <p className="text-xs font-black tracking-tight leading-tight">AI &amp; Business Automation Executive</p>
+                        <a href="https://conceptgrps.com" target="_blank" rel="noopener noreferrer" className="text-[10px] text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors underline underline-offset-2 font-bold tracking-wide">@ Conceptgrps.com</a>
+                      </div>
+                    </div>
+                  </div>
+
                   <div className="flex items-start gap-4">
                     <Cpu size={20} className="mt-1 text-gray-400" />
                     <div>
                       <p className="text-[10px] uppercase tracking-widest mb-1 opacity-40 font-bold">Protocol</p>
-                      <p className="text-sm font-bold tracking-tight">PYTHON / TS / n8n</p>
+                      <p className="text-sm font-bold tracking-tight">PYTHON / TS / n8n / ODOO</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -139,7 +155,7 @@ export const HeroTerminal: React.FC = () => {
                       <p className="text-sm font-bold tracking-tight">AWS / GCP / DOCKER</p>
                     </div>
                   </div>
-                  <div className="pt-8 border-t border-gray-100 dark:border-gray-800/50">
+                  <div className="pt-6 border-t border-gray-100 dark:border-gray-800/50">
                     <div className="flex justify-between items-center text-[9px] opacity-30 uppercase tracking-[0.2em] font-bold">
                       <span className="flex items-center gap-2">
                         <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>

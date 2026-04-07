@@ -26,7 +26,7 @@ export const AboutSection: React.FC = () => {
             </h2>
             
             <p className="text-xl text-gray-500 dark:text-gray-400 mb-16 font-light leading-relaxed max-w-xl">
-              AI & Business Automation Executive at Conceptgrps.com, guiding enterprise automation, Odoo orchestration, and data-driven intelligence. Currently accepting limited project engagements and technical consulting for Q3-Q4 2024. Let's engineer something remarkable.
+              Currently serving as <span className="text-black dark:text-white font-bold">AI & Business Automation Executive at Conceptgrps.com</span>, where I architect enterprise-grade Odoo systems and intelligent n8n workflows. Specializing in high-impact B2B automation and smart reporting engines for the 2026-2027 business landscape.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-16">

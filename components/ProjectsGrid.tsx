@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Github } from 'lucide-react';
+import { ArrowUpRight, Github, Building2 } from 'lucide-react';
 import { PROJECTS } from '../constants';
 import { Project } from '../types';
 
+const CONCEPTGRPS_IDS = new Set(['b2b-workflow-automation', 'ivms-platform', 'odoo-report-bot', 'odoo-multichannel-alerts', 'odoo-whatsapp']);
+
 const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => {
+  const isEnterprise = CONCEPTGRPS_IDS.has(project.id);
   return (
     <motion.div
       initial={{ opacity: 0, filter: 'blur(15px)', y: 40 }}
@@ -19,6 +22,12 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
           alt={project.title} 
           className="w-full h-full object-cover filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 scale-100 group-hover:scale-110"
         />
+        {isEnterprise && (
+          <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1.5 bg-black/80 dark:bg-white/10 backdrop-blur-md border border-green-500/40">
+            <Building2 size={11} className="text-green-400" />
+            <span className="text-[9px] font-black tracking-[0.2em] uppercase text-green-400">Conceptgrps.com</span>
+          </div>
+        )}
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 backdrop-blur-sm transition-all duration-500 flex items-center justify-center gap-6">
           <a href={project.githubUrl} target="_blank" className="p-4 bg-white text-black hover:scale-110 transition-transform rounded-full shadow-lg">
             <Github size={22} />
