@@ -14,8 +14,11 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
       whileInView={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay: index * 0.1, ease: "easeOut" }}
-      className="group relative border border-gray-100 dark:border-gray-900 overflow-hidden bg-white dark:bg-black"
+      className="group relative border border-gray-100 dark:border-gray-900 overflow-hidden bg-white dark:bg-black hover:border-gray-300 dark:hover:border-gray-700 transition-colors duration-500"
     >
+      {/* Decorative Glow */}
+      <div className="absolute -inset-2 bg-gradient-to-r from-gray-200 to-gray-100 dark:from-white/5 dark:to-transparent opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-1000"></div>
+      
       <div className="relative aspect-[16/10] overflow-hidden bg-gray-50 dark:bg-gray-950">
         <img 
           src={project.image} 

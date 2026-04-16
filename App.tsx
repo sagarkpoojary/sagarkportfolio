@@ -47,6 +47,12 @@ const App: React.FC = () => {
       <SpeedInsights />
       <Analytics />
       
+      {/* Scroll Progress Bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-black dark:bg-white z-[60] origin-left"
+        style={{ scaleX: scrollYProgress }}
+      />
+      
       {/* Dynamic Blurry Background Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <motion.div 

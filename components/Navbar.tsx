@@ -33,22 +33,27 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
       initial="hidden"
       animate="visible"
       variants={navVariants}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled 
-          ? 'bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm' 
-          : 'bg-transparent'
+          ? 'bg-white/70 dark:bg-black/70 backdrop-blur-xl border-b border-gray-100 dark:border-white/5 py-2' 
+          : 'bg-transparent py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16">
           
           {/* Logo */}
           <div className="flex-shrink-0">
             <button 
               onClick={scrollToTop}
-              className="font-mono text-xl font-bold tracking-tighter text-slate-900 dark:text-white hover:text-brand-500 transition-colors"
+              className="group font-mono text-xl font-bold tracking-tighter text-black dark:text-white flex items-center gap-2"
             >
-              &lt;{PERSONAL_INFO.name.split(' ')[0]} /&gt;
+              <span className="opacity-40 group-hover:opacity-100 transition-opacity">&lt;</span>
+              <span className="relative">
+                {PERSONAL_INFO.name.split(' ')[0]}
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-black dark:bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              </span>
+              <span className="opacity-40 group-hover:opacity-100 transition-opacity">/&gt;</span>
             </button>
           </div>
 
